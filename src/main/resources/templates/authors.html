@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Spring thymeleaf</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
         </tr>
         <tr th:each="author : ${authors}">
             <td th:text="${author.id}">123</td>
-            <td th:text="${author.fname}">LEL</td>
+            <td><span th:text="${author.fname}">Joe</span> <span th:text="${author.lname}">Buck</span></td>
             <td th:text="${author.books.size()}">Wrox</td>
         </tr>
     </table>

@@ -15,11 +15,13 @@ public class AuthorController
         this.authorRepository = authorRepository;
     }
 
-    @RequestMapping
+    @RequestMapping("/authors")
     public String getAuthors(Model model)
     {
+        // adding the list of authors to the model object.
         model.addAttribute("authors", authorRepository.findAll());
 
+        // returns the view name. which can be found within the templates directory.
         return "authors";
     }
 }
